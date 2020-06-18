@@ -1,0 +1,6 @@
+*** Settings ***
+Resource    shared/browser.txt
+Resource    ../locators/homepage_locators.txt
+
+
+*** Keywords ***

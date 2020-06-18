@@ -1,0 +1,11 @@
+*** Settings ***
+Documentation    In this file, you'll find all the commun keywords, the keywords that are generaly used by many tests
+Resource    ../loginpage_keywords.txt
+
+
+*** Keywords ***
+Login Successfuly
+    Set The Login Email
+    Set The Password    
+    Click On Connexion Button
+    Check The Home Page Title 

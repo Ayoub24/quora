@@ -1,0 +1,2 @@
+*** Variables ***
+${addquestionbtn_XPATH}    //div[@class='q-text qu-flex--auto puppeteer_test_button_text qu-medium' and  ./text()='Ajouter une question']

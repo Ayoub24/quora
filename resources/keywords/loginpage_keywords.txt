@@ -1,0 +1,36 @@
+*** Settings ***
+Library    Selenium2Library   
+Resource    ../locators/loginpage_locators.txt
+Resource    ../variables/loginpage_variables.txt
+Resource    ../locators/homepage_locators.txt
+Resource    shared/browser.txt 
+
+
+*** Keywords ***
+Set The Login Email
+    Input Text    ${loginemail_XPATH}    ${EMAIL}
+    
+Set The Password
+    Input Text    ${loginppassword_XPATH}    ${PWD}
+    
+Click On Connexion Button
+    Sleep     2s
+    Wait Until Keyword Succeeds    3    3s    Click Element    ${connexiobtn_XPATH}    
+           
+Check The Home Page Title 
+    Wait Until Page Contains Element    ${addquestionbtn_XPATH}      
+    Capture Page Screenshot
+    
+Set An Invalid Login Email
+    Input Text    ${loginemail_XPATH}    ${incorrectloginmail}
+    
+Check The Error Message - Email Not Found
+    Wait Until Element Is Visible    ${loginemailmsgerror_XPATH}
+    Capture Page Screenshot    
+   
+Set An Invalid Password
+    Input Text    ${loginppassword_XPATH}    ${incorrectpwd}
+ 
+Check The Error Message - Password Incorrect
+    Wait Until Element Is Visible    ${pwdmsgerror_XPATH}
+    Capture Page Screenshot     

@@ -1,0 +1,5 @@
+BROWSER="chrome"
+URL="https://fr.quora.com/"
+ALIAS="quora_prod"
+EMAIL="treylen.otoniel@andyes.net"
+PWD="bqppv4U?"

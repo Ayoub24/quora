@@ -1,0 +1,6 @@
+*** Variables ***
+${loginemail_XPATH}    //input[@placeholder='E-mail']
+${loginppassword_XPATH}    //input[@placeholder='Mot de passe']
+${connexiobtn_XPATH}    //input[@value='Connexion']
+${loginemailmsgerror_XPATH}    //div[./text()='Aucun compte trouvé pour cet e-mail. Réessayer ou ']
+${pwdmsgerror_XPATH}    //div[./text()='Mot de passe incorrect. ']

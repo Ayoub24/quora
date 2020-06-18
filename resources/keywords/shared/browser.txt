@@ -1,0 +1,13 @@
+*** Settings ***
+Documentation    All keywords related to browser and browser configuration
+Library    Selenium2Library    
+
+
+*** Keywords ***
+Open The Browser To Quora Page
+    Open Browser    ${URL}    ${BROWSER}    ${ALIAS}
+    Maximize Browser Window
+    Set Browser Implicit Wait    3s
+    
+Close The Browser
+    Close All Browsers
